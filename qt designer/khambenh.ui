@@ -1,0 +1,1271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>749</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+  background-color: #f0f3f4;
+}
+
+QGroupBox {
+  font-size: 11px;
+  font-weight: bold;
+  color: #566573;
+  border: 1px solid #d5d8dc;
+  border-radius: 6px;
+  margin-top: 10px;
+  background-color: white;
+  padding-top: 6px;
+}
+
+QGroupBox::title {
+  subcontrol-origin: margin;
+  subcontrol-position: top left;
+  left: 10px;
+  padding: 0 5px;
+  background-color: white;
+}
+
+QLineEdit, QTextEdit {
+  border: 1px solid #d5d8dc;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 4px 6px;
+  background-color: white;
+}
+
+QLineEdit:focus, QTextEdit:focus {
+  border-color: #1a5276;
+}
+
+QTableWidget {
+  border: 1px solid #d5d8dc;
+  border-radius: 4px;
+  font-size: 12px;
+  gridline-color: #eaecee;
+}
+
+QTableWidget::item:selected {
+  background-color: #d6eaf8;
+  color: #1a5276;
+}
+
+QHeaderView::section {
+  background-color: #f2f3f4;
+  border: none;
+  border-bottom: 1px solid #d5d8dc;
+  font-size: 11px;
+  font-weight: bold;
+  color: #566573;
+  padding: 5px 8px;
+}
+
+QPushButton {
+  font-size: 12px;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+QComboBox {
+  border: 1px solid #d5d8dc;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 4px 6px;
+  background-color: white;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1100</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:#1a5276</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>10</y>
+       <width>700</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:white; font-size:14px; font-weight:bold;</string>
+     </property>
+     <property name="text">
+      <string>CHMS — Khám bệnh &amp; Kê đơn thuốc</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>800</x>
+       <y>13</y>
+       <width>290</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#aed6f1; font-size:11px;</string>
+     </property>
+     <property name="text">
+      <string>BS. Nguyễn Văn A | Đăng xuất</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>45</y>
+      <width>220</width>
+      <height>655</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #f0f3f4;
+               border-right: 1px solid #d5d8dc;</string>
+    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>8</x>
+       <y>8</y>
+       <width>204</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:10px; font-weight:bold; color:#566573; letter-spacing:0.5px;</string>
+     </property>
+     <property name="text">
+      <string>DANH SÁCH CHỜ KHÁM (5)</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frame_2">
+     <property name="geometry">
+      <rect>
+       <x>4</x>
+       <y>32</y>
+       <width>212</width>
+       <height>72</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:#e8f4f8; border-left:3px solid #1a5276;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>8</y>
+        <width>180</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:none</string>
+      </property>
+      <property name="text">
+       <string>Lê Thị Hoa</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>28</y>
+        <width>180</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:none; font-size:10px; color:gray</string>
+      </property>
+      <property name="text">
+       <string>BN-003 · 46 tuổi · Nữ</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>46</y>
+        <width>100</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:none;color:#1a5276;</string>
+      </property>
+      <property name="text">
+       <string>Đang khám</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="frame_3">
+     <property name="geometry">
+      <rect>
+       <x>4</x>
+       <y>118</y>
+       <width>212</width>
+       <height>68</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:white; border:1px solid #d5d8dc; border-radius:4px;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>8</y>
+        <width>180</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:12px; font-weight:bold; color:#2c3e50;</string>
+      </property>
+      <property name="text">
+       <string>Nguyễn Văn Bình</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>28</y>
+        <width>180</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:10px; color:#7f8c8d;</string>
+      </property>
+      <property name="text">
+       <string>BN-012 · 34 tuổi · Nam</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="frame_4">
+     <property name="geometry">
+      <rect>
+       <x>4</x>
+       <y>196</y>
+       <width>212</width>
+       <height>68</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:white; border:1px solid #d5d8dc; border-radius:4px;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>180</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:12px; font-weight:bold; color:#2c3e50;</string>
+      </property>
+      <property name="text">
+       <string>Phạm Thiên An</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>180</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:10px; color:#7f8c8d;</string>
+      </property>
+      <property name="text">
+       <string>BN-019 · 24 tuổi · Nữ</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="frame_9">
+     <property name="geometry">
+      <rect>
+       <x>4</x>
+       <y>274</y>
+       <width>212</width>
+       <height>68</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:white; border:1px solid #d5d8dc; border-radius:4px;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>180</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:12px; font-weight:bold; color:#2c3e50;</string>
+      </property>
+      <property name="text">
+       <string>Trần Kiên Hưng</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>180</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:10px; color:#7f8c8d;</string>
+      </property>
+      <property name="text">
+       <string>BN-024 · 18 tuổi · Nam</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>225</x>
+      <y>55</y>
+      <width>865</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+               font-size: 11px;
+               font-weight: bold;
+               color: #566573;
+               border: 1px solid #d5d8dc;
+               border-radius: 6px;
+               margin-top: 8px;
+               background-color: white;
+             }
+             QGroupBox::title {
+               subcontrol-origin: margin;
+               left: 10px;
+               padding: 0 4px;
+             }</string>
+    </property>
+    <property name="title">
+     <string>Chỉ số sinh tồn (Y tá đo)</string>
+    </property>
+    <widget class="QFrame" name="frame_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>22</y>
+       <width>198</width>
+       <height>62</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame { background:#eafaf1; border-radius:6px; border:1px solid #a9dfbf; }</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>8</y>
+        <width>178</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:10px; color:#1e8449;</string>
+      </property>
+      <property name="text">
+       <string>Huyết áp</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>28</y>
+        <width>178</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:16px; font-weight:bold; color:#1a5276;</string>
+      </property>
+      <property name="text">
+       <string>145/95 mmHg</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="frame_6">
+     <property name="geometry">
+      <rect>
+       <x>218</x>
+       <y>22</y>
+       <width>198</width>
+       <height>62</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame { background:#eaf2f8; border-radius:6px; border:1px solid #a9dfbf; }</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>8</y>
+        <width>178</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:10px; color:#1e8449;</string>
+      </property>
+      <property name="text">
+       <string>Nhiệt độ</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>28</y>
+        <width>178</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:16px; font-weight:bold; color:#1a5276;</string>
+      </property>
+      <property name="text">
+       <string>37.2°C</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="frame_7">
+     <property name="geometry">
+      <rect>
+       <x>426</x>
+       <y>22</y>
+       <width>198</width>
+       <height>62</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame { background:#eaf2f8; border-radius:6px; border:1px solid #a9dfbf; }</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>8</y>
+        <width>178</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:10px; color:#1e8449;</string>
+      </property>
+      <property name="text">
+       <string>Cân nặng</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>28</y>
+        <width>178</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:16px; font-weight:bold; color:#1a5276;</string>
+      </property>
+      <property name="text">
+       <string>62 kg</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="frame_8">
+     <property name="geometry">
+      <rect>
+       <x>634</x>
+       <y>22</y>
+       <width>198</width>
+       <height>62</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame { background:#eaf2f8; border-radius:6px; border:1px solid #a9dfbf; }</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>8</y>
+        <width>178</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:10px; color:#1e8449;</string>
+      </property>
+      <property name="text">
+       <string>Nhịp tim</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>28</y>
+        <width>178</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:16px; font-weight:bold; color:#1a5276;</string>
+      </property>
+      <property name="text">
+       <string>82 lần/phút</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_21">
+    <property name="geometry">
+     <rect>
+      <x>225</x>
+      <y>163</y>
+      <width>865</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+               background-color: #fdedec;
+               color: #c0392b;
+               border: 1px solid #f1948a;
+               border-radius: 5px;
+               font-size: 12px;
+               font-weight: bold;
+               padding-left: 10px;
+             }</string>
+    </property>
+    <property name="text">
+     <string>⚠   CẢNH BÁO DỊ ỨNG: Bệnh nhân dị ứng Penicillin — kiểm tra trước khi kê đơn!</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>225</x>
+      <y>200</y>
+      <width>865</width>
+      <height>175</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+               font-size: 11px;
+               font-weight: bold;
+               color: #566573;
+               border: 1px solid #d5d8dc;
+               border-radius: 6px;
+               margin-top: 8px;
+               background-color: white;
+             }
+             QGroupBox::title {
+               subcontrol-origin: margin;
+               left: 10px;
+               padding: 0 4px;
+             }</string>
+    </property>
+    <property name="title">
+     <string>Kết quả khám lâm sàng</string>
+    </property>
+    <widget class="QLabel" name="label_22">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>25</y>
+       <width>80</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:12px; color:#566573;</string>
+     </property>
+     <property name="text">
+      <string>Triệu chứng:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_23">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>86</y>
+       <width>80</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:12px; color:#566573;</string>
+     </property>
+     <property name="text">
+      <string>Chẩn đoán:</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textEdit">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>22</y>
+       <width>745</width>
+       <height>55</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTextEdit { border:1px solid #d5d8dc; border-radius:4px; font-size:12px; padding:4px; }</string>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'ui-monospace,monospace'; font-size:10px;&quot;&gt;Bệnh nhân than đau đầu, chóng mặt, huyết áp cao hơn bình thường&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>83</y>
+       <width>360</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit { border:1px solid #d5d8dc; border-radius:4px; font-size:12px; padding:4px; }</string>
+     </property>
+     <property name="text">
+      <string>Tăng huyết áp không kiểm soát</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_24">
+     <property name="geometry">
+      <rect>
+       <x>475</x>
+       <y>86</y>
+       <width>70</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:12px; color:#566573;</string>
+     </property>
+     <property name="text">
+      <string>Mã ICD-10:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>555</x>
+       <y>83</y>
+       <width>290</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit { border:1px solid #d5d8dc; border-radius:4px; font-size:12px; padding:4px; }</string>
+     </property>
+     <property name="text">
+      <string>I10 — Tăng huyết áp nguyên phát</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_25">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>118</y>
+       <width>295</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:10px; color:#27ae60; font-style:italic;</string>
+     </property>
+     <property name="text">
+      <string>→ Không thuộc bệnh dịch cần báo cáo</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_26">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>145</y>
+       <width>80</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:12px; color:#566573;</string>
+     </property>
+     <property name="text">
+      <string>Ghi chú:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_3">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>142</y>
+       <width>745</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit { border:1px solid #d5d8dc; border-radius:4px; font-size:12px; padding:4px; }</string>
+     </property>
+     <property name="text">
+      <string>Ghi chú thêm của bác sĩ (nếu có)...</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>225</x>
+      <y>380</y>
+      <width>865</width>
+      <height>230</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+               font-size: 11px;
+               font-weight: bold;
+               color: #566573;
+               border: 1px solid #d5d8dc;
+               border-radius: 6px;
+               margin-top: 8px;
+               background-color: white;
+             }
+             QGroupBox::title {
+               subcontrol-origin: margin;
+               left: 10px;
+               padding: 0 4px;
+             }</string>
+    </property>
+    <property name="title">
+     <string>Đơn thuốc</string>
+    </property>
+    <widget class="QLabel" name="label_27">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>25</y>
+       <width>300</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:11px; font-weight:bold; color:#566573; background:#f2f3f4; padding:3px 6px; border-radius:3px;</string>
+     </property>
+     <property name="text">
+      <string>Tên thuốc / Hoạt chất</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_28">
+     <property name="geometry">
+      <rect>
+       <x>318</x>
+       <y>25</y>
+       <width>140</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:11px; font-weight:bold; color:#566573; background:#f2f3f4; padding:3px 6px; border-radius:3px;</string>
+     </property>
+     <property name="text">
+      <string>Liều lượng</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_29">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>25</y>
+       <width>140</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:11px; font-weight:bold; color:#566573; background:#f2f3f4; padding:3px 6px; border-radius:3px;</string>
+     </property>
+     <property name="text">
+      <string>Số lần/ngày</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_30">
+     <property name="geometry">
+      <rect>
+       <x>614</x>
+       <y>25</y>
+       <width>140</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:11px; font-weight:bold; color:#566573; background:#f2f3f4; padding:3px 6px; border-radius:3px;</string>
+     </property>
+     <property name="text">
+      <string>Số ngày dùng</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_8">
+     <property name="geometry">
+      <rect>
+       <x>318</x>
+       <y>50</y>
+       <width>140</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit { border:1px solid #d5d8dc; border-radius:4px; font-size:12px; padding:4px; }</string>
+     </property>
+     <property name="text">
+      <string>1 viên</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_9">
+     <property name="geometry">
+      <rect>
+       <x>466</x>
+       <y>50</y>
+       <width>140</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit { border:1px solid #d5d8dc; border-radius:4px; font-size:12px; padding:4px; }</string>
+     </property>
+     <property name="text">
+      <string>1 lần/ngày</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_10">
+     <property name="geometry">
+      <rect>
+       <x>614</x>
+       <y>50</y>
+       <width>140</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit { border:1px solid #d5d8dc; border-radius:4px; font-size:12px; padding:4px; }</string>
+     </property>
+     <property name="text">
+      <string>30 ngày</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_11">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>300</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit { border:1px solid #d5d8dc; border-radius:4px; font-size:12px; padding:4px; }</string>
+     </property>
+     <property name="text">
+      <string>Amlodipine 5mg</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>762</x>
+       <y>50</y>
+       <width>30</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton { color:#c0392b; border:1px solid #f1948a; border-radius:4px; font-size:14px; background:white; }</string>
+     </property>
+     <property name="text">
+      <string>X</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_12">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>300</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit { border:1px solid #d5d8dc; border-radius:4px; font-size:12px; padding:4px; }</string>
+     </property>
+     <property name="text">
+      <string>Losartan 50mg</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_13">
+     <property name="geometry">
+      <rect>
+       <x>318</x>
+       <y>90</y>
+       <width>140</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit { border:1px solid #d5d8dc; border-radius:4px; font-size:12px; padding:4px; }</string>
+     </property>
+     <property name="text">
+      <string>1 viên</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>762</x>
+       <y>90</y>
+       <width>30</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton { color:#c0392b; border:1px solid #f1948a; border-radius:4px; font-size:14px; background:white; }</string>
+     </property>
+     <property name="text">
+      <string>X</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_14">
+     <property name="geometry">
+      <rect>
+       <x>466</x>
+       <y>90</y>
+       <width>140</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit { border:1px solid #d5d8dc; border-radius:4px; font-size:12px; padding:4px; }</string>
+     </property>
+     <property name="text">
+      <string>1 lần/ngày</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_15">
+     <property name="geometry">
+      <rect>
+       <x>614</x>
+       <y>90</y>
+       <width>140</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit { border:1px solid #d5d8dc; border-radius:4px; font-size:12px; padding:4px; }</string>
+     </property>
+     <property name="text">
+      <string>30 ngày</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>128</y>
+       <width>120</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton { color:#1a5276; background:transparent; border:1px dashed #1a5276; border-radius:4px; font-size:11px; }\</string>
+     </property>
+     <property name="text">
+      <string>+ Thêm thuốc</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_31">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>162</y>
+       <width>100</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:12px; color:#566573;</string>
+     </property>
+     <property name="text">
+      <string>Hướng dẫn dùng:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_4">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>159</y>
+       <width>732</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit { border:1px solid #d5d8dc; border-radius:4px; font-size:12px; padding:4px; }</string>
+     </property>
+     <property name="text">
+      <string>Uống sau bữa ăn, không dùng chung với rượu bia...</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_32">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>197</y>
+       <width>845</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:11px; color:#27ae60; background:#eafaf1; border-radius:3px; padding:3px 8px;</string>
+     </property>
+     <property name="text">
+      <string>✓ Hệ thống đã kiểm tra tương tác thuốc — Không phát hiện tương tác nguy hiểm</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_10">
+    <property name="geometry">
+     <rect>
+      <x>225</x>
+      <y>618</y>
+      <width>865</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+               background-color: #f8f9fa;border-top: 1px solid #d5d8dc; }</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>180</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton { background-color: #1a5276; color: white; border-radius: 5px; font-size: 13px; font-weight: bold; } QPushButton:hover { background-color: #154360; }</string>
+     </property>
+     <property name="text">
+      <string>Hoàn tất khám</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>198</x>
+       <y>10</y>
+       <width>160</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton { background-color: #1e8449; color: white; border-radius: 5px; font-size: 13px; font-weight: bold; } QPushButton:hover { background-color: #196f3d; }</string>
+     </property>
+     <property name="text">
+      <string>In đơn thuốc</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="geometry">
+      <rect>
+       <x>366</x>
+       <y>10</y>
+       <width>190</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton { background-color: white; color: #1a5276; border: 1px solid #1a5276; border-radius: 5px; font-size: 13px; } QPushButton:hover { background-color: #eaf2f8; }</string>
+     </property>
+     <property name="text">
+      <string>Lập phiếu chuyển viện</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_7">
+     <property name="geometry">
+      <rect>
+       <x>564</x>
+       <y>10</y>
+       <width>80</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton { background-color: white; color: #7f8c8d; border: 1px solid #d5d8dc; border-radius: 5px; font-size: 13px; } QPushButton:hover { background-color: #f2f3f4; }</string>
+     </property>
+     <property name="text">
+      <string>Hủy</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1100</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
