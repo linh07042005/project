@@ -31,5 +31,4 @@ Hệ thống hỗ trợ quản lý thông tin sức khỏe, hồ sơ y tế và 
 ```text
 ├── qt designer/          # File thiết kế giao diện UI (.ui)
 ├── CHMS_Chuong2.astah    # File thiết kế sơ đồ hệ thống (Use Case, DFD, ERD)
-├── src/                  # Mã nguồn xử lý logic Python (.py)
-└── docs/                 # Slide báo cáo & Tài liệu mô tả hệ thống (.pptx)
+└── ppt/                 # Slide báo cáo & Tài liệu mô tả hệ thống (.pptx)
